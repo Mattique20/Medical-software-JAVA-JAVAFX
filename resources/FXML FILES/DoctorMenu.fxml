@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="541.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.temp.DoctorMenuController">
+    <children>
+        <Pane prefHeight="539.0" prefWidth="169.0" style="-fx-background-color: #85C3FE;">
+            <children>
+                <ImageView fitHeight="85.0" fitWidth="82.0" layoutX="40.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/logo.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="46.0" layoutY="103.0" text="VITALIFE" textFill="#2e12bc">
+                    <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Line endX="-3.9000167846679688" endY="-1.52587890625E-5" layoutX="80.0" layoutY="151.0" startX="-81.00001525878906" startY="-1.52587890625E-5" stroke="#fcfafa" />
+                <Label layoutX="10.0" layoutY="126.0" prefHeight="13.0" prefWidth="142.0" text="Embrace Vital Living" textFill="#2e12bc">
+                    <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Text fill="WHITE" layoutX="10.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discover a health-focused hub for appointments, resources, and the latest medical insights. Your journey to well-being starts here." wrappingWidth="141.99999999999997">
+                    <font>
+                        <Font name="Arial" size="12.0" />
+                    </font>
+                </Text>
+                <Label layoutX="10.0" layoutY="258.0" text="DASHBOARD" textFill="#2e12bc">
+                    <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Button fx:id="HistoryButton" layoutX="17.0" layoutY="295.0" mnemonicParsing="false" onAction="#switchToPatientHistory" prefHeight="38.0" prefWidth="131.0" styleClass="sidebarItem" stylesheets="@CSS/Style.css" text="Patient History">
+                    <font>
+                        <Font name="Arial Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="ProfileButton" layoutX="21.0" layoutY="352.0" mnemonicParsing="false" onAction="#switchToProfilePage" prefHeight="38.0" prefWidth="131.0" stylesheets="@CSS/Style.css" text="Manage Profile" textFill="#201f1f">
+                    <font>
+                        <Font name="Arial Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="ReviewButton" layoutX="21.0" layoutY="412.0" mnemonicParsing="false" onAction="#switchToReviewPage" prefHeight="38.0" prefWidth="131.0" stylesheets="@CSS/Style.css" text="Reviews">
+                    <font>
+                        <Font name="Arial Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="Logoutbutton" layoutX="21.0" layoutY="468.0" mnemonicParsing="false" onAction="#switchToLoginPage" prefHeight="38.0" prefWidth="131.0" stylesheets="@CSS/Style.css" text="Logout">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font></Button>
+            </children></Pane>
+        <ImageView fitHeight="75.0" fitWidth="82.0" layoutX="294.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" />
+        <Pane layoutX="162.0" prefHeight="75.0" prefWidth="674.0" style="-fx-background-color: #85C3FE;">
+            <children>
+                <Label layoutX="186.0" layoutY="30.0" prefHeight="31.0" prefWidth="232.0" text="Welcome To Vitalife" textFill="#2e12bc">
+                    <font>
+                        <Font name="Century Gothic Bold Italic" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane layoutX="166.0" layoutY="75.0" prefHeight="374.0" prefWidth="667.0">
+            <children>
+                <ImageView fitHeight="374.0" fitWidth="674.0" layoutX="4.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@images/dashboard.png" />
+
+                    </image>
+                    <effect>
+                        <ColorAdjust brightness="-0.5" />
+                    </effect>
+                </ImageView>
+                <Label layoutX="174.0" layoutY="152.0" stylesheets="@CSS/Style.css" text="Check your schedule for the day" textFill="WHITE">
+                    <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                    </font>
+               <effect>
+                  <Reflection fraction="1.0" topOpacity="0.48" />
+               </effect>
+                </Label>
+                <Button fx:id="BookingButton" layoutX="263.0" layoutY="187.0" mnemonicParsing="false" onAction="#switchToBookingPage" prefHeight="36.0" prefWidth="109.0" stylesheets="@CSS/Style.css" text="Bookings">
+                    <font>
+                        <Font name="Arial" size="12.0" />
+                    </font></Button>
+            </children>
+        </Pane>
+        <Pane layoutX="170.0" layoutY="447.0" prefHeight="94.0" prefWidth="667.0" style="-fx-background-color: #242424;">
+            <children>
+                <Label layoutX="12.0" layoutY="65.0" prefHeight="18.0" prefWidth="109.0" text="A.K. Brohi Road, H-11/4" textFill="WHITE">
+                    <font>
+                        <Font name="Arial" size="10.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="75.0" fitWidth="91.0" layoutX="20.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/Untitled%20design%20(24).png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="135.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/Untitled%20design%20(23).png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="133.0" layoutY="68.0" text="(051) 111 241 241" textFill="#faefef">
+                    <font>
+                        <Font name="Arial" size="10.0" />
+                    </font>
+                </Label>
+                <Label layoutX="291.0" layoutY="31.0" text="Find us" textFill="#f2f0f0">
+                    <font>
+                        <Font name="Arial Bold" size="24.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="431.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/fb.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="487.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/insta.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="562.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/X.png" />
+                    </image>
+                </ImageView>
+            </children></Pane>
+
+    </children>
+
+</AnchorPane>

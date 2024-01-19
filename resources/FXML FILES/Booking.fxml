@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="543.0" prefWidth="943.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.temp.BookingController">
+    <children>
+        <Pane prefHeight="545.0" prefWidth="170.0" style="-fx-background-color: #85C3FE;">
+            <children>
+                <ImageView fitHeight="85.0" fitWidth="82.0" layoutX="40.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/logo.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="46.0" layoutY="103.0" text="VITALIFE" textFill="#2e12bc">
+                    <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Line endX="-3.9000167846679688" endY="-1.52587890625E-5" layoutX="80.0" layoutY="151.0" startX="-81.00001525878906" startY="-1.52587890625E-5" stroke="#fcfafa" />
+                <Label layoutX="10.0" layoutY="126.0" prefHeight="13.0" prefWidth="142.0" text="Embrace Vital Living" textFill="#2e12bc">
+                    <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Text fill="WHITE" layoutX="10.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discover a health-focused hub for appointments, resources, and the latest medical insights. Your journey to well-being starts here." wrappingWidth="141.99999999999997">
+                    <font>
+                        <Font name="Arial" size="12.0" />
+                    </font>
+                </Text>
+                <Label layoutX="10.0" layoutY="258.0" text="DASHBOARD" textFill="#2e12bc">
+                    <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Button fx:id="DashboardButton" layoutX="16.0" layoutY="299.0" mnemonicParsing="false" onAction="#switchToDashboard" prefHeight="38.0" prefWidth="131.0" stylesheets="@CSS/Style.css" text="Home Page">
+                    <font>
+                        <Font name="Arial Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="HealthCareButton" layoutX="17.0" layoutY="353.0" mnemonicParsing="false" onAction="#switchToHealthcarePage" prefHeight="38.0" prefWidth="131.0" styleClass="sidebarItem" stylesheets="@CSS/Style.css" text="HealthCare">
+                    <font>
+                        <Font name="Arial Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="QuestionButton" layoutX="18.0" layoutY="406.0" mnemonicParsing="false" onAction="#switchToQuestionPage" prefHeight="38.0" prefWidth="131.0" stylesheets="@CSS/Style.css" text="Ask a Question" textFill="#201f1f">
+                    <font>
+                        <Font name="Arial Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="ReviewButton" layoutX="18.0" layoutY="460.0" mnemonicParsing="false" onAction="#switchToReviewPage" prefHeight="38.0" prefWidth="131.0" stylesheets="@CSS/Style.css" text="Doctor Review">
+                    <font>
+                        <Font name="Arial Bold" size="12.0" />
+                    </font></Button>
+            </children></Pane>
+        <ImageView fitHeight="75.0" fitWidth="82.0" layoutX="294.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" />
+        <Pane layoutX="162.0" prefHeight="75.0" prefWidth="790.0" style="-fx-background-color: #85C3FE;">
+            <children>
+                <Label layoutX="249.0" layoutY="30.0" prefHeight="31.0" prefWidth="177.0" text="Booking Page" textFill="#2e12bc">
+                    <font>
+                        <Font name="Century Gothic Bold Italic" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane layoutX="166.0" layoutY="75.0" prefHeight="374.0" prefWidth="783.0">
+            <children>
+                <ImageView fx:id="notes" fitHeight="374.0" fitWidth="783.0" layoutX="4.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@images/dashboard.png" />
+
+                    </image>
+                    <effect>
+                        <ColorAdjust brightness="-0.5" />
+                    </effect>
+                </ImageView>
+                <Button fx:id="BookButton" layoutX="144.0" layoutY="267.0" mnemonicParsing="false" onAction="#BOOKACTION" prefHeight="36.0" prefWidth="85.0" stylesheets="@CSS/Style.css" text="Book">
+                    <font>
+                        <Font name="Arial Bold" size="12.0" />
+                    </font>
+                </Button>
+              <ChoiceBox fx:id="type" blendMode="HARD_LIGHT" cache="true" depthTest="DISABLE" layoutX="115.0" layoutY="46.0" prefHeight="38.0" prefWidth="142.0" snapToPixel="false" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;">
+                  <items>
+                      <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="Appointment" />
+                          <String fx:value="Consultation" />
+                      </FXCollections>
+                  </items>
+               <opaqueInsets>
+                  <Insets right="1.0" />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+              </ChoiceBox>
+            <Label layoutX="42.0" layoutY="53.0" prefHeight="23.0" prefWidth="53.0" text="Type:" textFill="#f7f1f1">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+                <DatePicker fx:id="datePicker" layoutX="115.0" layoutY="196.0" prefHeight="38.0" prefWidth="142.0" />
+            <Label layoutX="45.0" layoutY="210.0" text="Date:" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="135.0" text="Time:" textFill="#faf4f4">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="time" blendMode="HARD_LIGHT" cache="true" depthTest="DISABLE" layoutX="115.0" layoutY="128.0" prefHeight="38.0" prefWidth="142.0" snapToPixel="false" style="-fx-background-radius: 20; -fx-background-color: white; -fx-border-radius: 20;">
+                <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Morning" />
+                    <String fx:value="Evening" />
+                </FXCollections>
+                </items>
+            </ChoiceBox>
+            <ChoiceBox fx:id="searchparameter" layoutX="456.0" layoutY="47.0" prefHeight="38.0" prefWidth="142.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-text-fill: white;" styleClass="arrow">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Doctor Specialization" />
+                        <String fx:value="Hospital" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            <Label layoutX="346.0" layoutY="55.0" text="Search By:" textFill="#f4f0f0">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="343.0" layoutY="123.0" text="Enter Input:" textFill="#faf8f8">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="parameterfeild" layoutX="456.0" layoutY="110.0" prefHeight="36.0" prefWidth="142.0" style="-fx-border-color: white; -fx-text-fill: white" stylesheets="@CSS/Style.css">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font></TextField>
+            <Button fx:id="SearchButton" layoutX="487.0" layoutY="178.0" mnemonicParsing="false" onAction="#SearchAction" stylesheets="@CSS/Style.css" text="Search">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+                <TableView fx:id="tableview" layoutX="296.0" layoutY="221.0" prefHeight="128.0" prefWidth="473.0" stylesheets="@CSS/Table.css">
+                    <columns>
+                        <TableColumn fx:id="DrIDprop" prefWidth="86.5999755859375" text="DR ID" />
+                        <TableColumn fx:id="DrNameprop" prefWidth="101.4000244140625" text="Name" />
+                        <TableColumn fx:id="Contactprop" prefWidth="83.39996337890625" text="Contact" />
+                        <TableColumn fx:id="Specializationprop" prefWidth="124.0" text="Specialization" />
+                        <TableColumn fx:id="HospitalNameprop" prefWidth="74.4000244140625" text="HospitalID" />
+                    </columns>
+                </TableView>
+            <Label fx:id="Success" alignment="CENTER" layoutX="65.0" layoutY="321.0" prefHeight="16.0" prefWidth="236.0" textFill="#85c3fe">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font></Label>
+            <Label fx:id="Invalid" layoutX="126.0" layoutY="321.0" prefHeight="16.0" prefWidth="131.0" textFill="#ef0404">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
+            </children>
+        </Pane>
+        <Pane layoutX="170.0" layoutY="447.0" prefHeight="98.0" prefWidth="783.0" style="-fx-background-color: #242424;">
+            <children>
+                <Label layoutX="12.0" layoutY="65.0" prefHeight="18.0" prefWidth="109.0" text="A.K. Brohi Road, H-11/4" textFill="WHITE">
+                    <font>
+                        <Font name="Arial" size="10.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="75.0" fitWidth="91.0" layoutX="20.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/Untitled%20design%20(24).png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="135.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/Untitled%20design%20(23).png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="133.0" layoutY="68.0" text="(051) 111 241 241" textFill="#faefef">
+                    <font>
+                        <Font name="Arial" size="10.0" />
+                    </font>
+                </Label>
+                <Label layoutX="291.0" layoutY="31.0" text="Find us" textFill="#f2f0f0">
+                    <font>
+                        <Font name="Arial Bold" size="24.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="431.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/fb.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="498.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/insta.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="562.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/X.png" />
+                    </image>
+                </ImageView>
+            </children></Pane>
+
+    </children>
+
+</AnchorPane>

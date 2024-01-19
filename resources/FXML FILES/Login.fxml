@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="rootPane" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.temp.LoginController">
+    <!-- Background image -->
+
+    <!-- Login form card -->
+    <VBox alignment="CENTER" maxHeight="533.0" maxWidth="496.0" prefHeight="533.0" prefWidth="496.0" spacing="20" styleClass="control-box">
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image></ImageView>
+       
+        <Text fill="#2e12bc" text="VITALIFE">
+            <font>
+                <Font name="Calibri Bold" size="32.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="-15.0" />
+            </VBox.margin></Text>
+        <TextField id="ID1" fx:id="usernameField" prefHeight="23.0" prefWidth="506.0" promptText="Username" styleClass="text-field" stylesheets="@CSS/Style.css">
+            <VBox.margin>
+                <Insets left="50.0" right="50.0" />
+            </VBox.margin>
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect></TextField>
+        <PasswordField id="ID1" fx:id="passwordField" prefHeight="28.0" prefWidth="218.0" promptText="Password" styleClass="text-field" stylesheets="@CSS/Style.css">
+            <VBox.margin>
+                <Insets left="50.0" right="50.0" />
+            </VBox.margin></PasswordField>
+        <Button onAction="#switchToView" prefHeight="43.0" prefWidth="97.0" styleClass="font-menu-button" stylesheets="@CSS/Style.css" text="Login" textFill="#f3f4f7" textOverrun="CLIP">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font></Button>
+        <Text fx:id="loginMessage" />
+      <Label fx:id="errorLabel" textFill="#e40707">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+        <Hyperlink onAction="#handleShowSignup" text="Not registered yet? Sign up" />
+    </VBox>
+
+</StackPane>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="528.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.temp.SIGNUPController">
+    <!-- Background image -->
+    <ImageView fx:id="backgroundImage" fitHeight="574.0" fitWidth="782.0" opacity="0.85" style="-fx-background-color: rgba(0, 0, 0, 1);" styleClass="background-image">
+        <Image url="@images/background.jpg" />
+        <effect>
+            <ColorAdjust brightness="-0.5" />
+        </effect>
+    </ImageView>
+
+    <VBox id="id1" alignment="CENTER" layoutX="226.0" layoutY="12.0" prefHeight="546.0" prefWidth="338.0" spacing="10.0" style="-fx-background-color: rgba(255, 255, 255, 0.5); -fx-background-radius: 10;" styleClass="track-background">
+
+    <ImageView fitHeight="150.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+    <image>
+            <Image url="@images/logo.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+         <effect>
+            <Blend />
+         </effect>
+      </ImageView>
+
+        <Label text="Vitalife" textFill="#2e12bc">
+         <font>
+            <Font name="Calibri Bold" size="26.0" />
+         </font>
+      </Label>
+
+        <Label text="Username:" wrapText="true">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Label>
+        <TextField fx:id="usernameField" depthTest="DISABLE" prefHeight="26.0" prefWidth="260.0" stylesheets="@CSS/Style.css">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="50.0" right="50.0" top="-10.0" />
+         </VBox.margin>
+      </TextField>
+
+        <Label prefHeight="0.0" prefWidth="80.0" text="Password:">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets top="-10.0" />
+         </VBox.margin>
+      </Label>
+        <PasswordField fx:id="passwordField" styleClass="text-field" stylesheets="@CSS/Style.css">
+         <VBox.margin>
+            <Insets left="50.0" right="50.0" top="-10.0" />
+         </VBox.margin>
+         <padding>
+            <Insets top="-20.0" />
+         </padding>
+      </PasswordField>
+
+        <Label text="Confirm Password:">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Label>
+        <PasswordField fx:id="confirmPasswordField" styleClass="text-field" stylesheets="@CSS/Style.css">
+         <VBox.margin>
+            <Insets left="50.0" right="50.0" top="-10.0" />
+         </VBox.margin>
+      </PasswordField>
+      <Label text="Option:">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </Label>
+      <ChoiceBox fx:id="option" prefHeight="10.0" prefWidth="115.0" style="-fx-border-color: black;" stylesheets="@CSS/Style.css">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Patient" />
+                  <String fx:value="Doctor" />
+              </FXCollections>
+          </items>
+      </ChoiceBox>
+
+        <Button onAction="#onSignupButtonClick" prefHeight="39.0" prefWidth="112.0" stylesheets="@CSS/Style.css" text="Signup">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></Button>
+      <Label fx:id="registered" alignment="CENTER" prefHeight="18.0" prefWidth="347.0" textAlignment="CENTER" textFill="#2e12bc">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></Label>
+      <Label fx:id="errorMessageLabel" alignment="CENTER" prefHeight="15.0" prefWidth="330.0" textAlignment="CENTER" textFill="#e10808">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="-30.0" />
+         </VBox.margin></Label>
+      <Hyperlink onAction="#switchToLogin" prefHeight="22.0" prefWidth="200.0" text="Already have an account? login">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Hyperlink>
+    </VBox>
+
+
+</AnchorPane>
