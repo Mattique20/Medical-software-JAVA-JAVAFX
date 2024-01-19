@@ -1,0 +1,120 @@
+/* Style.css */
+
+.button {
+    -fx-background-color: #5ca1e1;
+    -fx-text-fill: #fff;
+    -fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.7), 5, 0.0, 0, 5 );
+    -fx-border: none;
+    -fx-cursor: hand;
+    -fx-padding: 10px 20px; /* Adjust padding as needed */
+    -fx-border-radius: 20px;
+    -fx-position-shape: false;
+    -fx-background-radius: 20px; /* Match border-radius */
+}
+
+.button:hover {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white; /* Make text white on hover */
+    -fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.5), 5, 0.0, 0, 5 ); /* Reduce shadow on hover */
+    -fx-border-color: white; /* Add white border on hover */
+    -fx-padding: 10px 25px; /* Adjust padding for hover state */
+}
+
+
+.text-field {
+    -fx-background-color: transparent; /* Set initial background color to transparent */
+    -fx-padding: 0.0em 0.0em 0.5em 0.0em; /* Adjust padding to control the height of the bottom line */
+    -fx-border-width: 0 0 1 0; /* Set border width only for the bottom */
+    -fx-border-color: #000; /* Set the color of the bottom line */
+}
+
+.text-field:focused {
+    -fx-border-color: #0078d4; /* Set the color of the bottom line when focused */
+    -fx-background-color: transparent;
+}
+
+.text-field:filled {
+    -fx-background-color: transparent; /* Set the background color to transparent when text is entered */
+    -fx-border-color: #0078d4; /* Set the color of the bottom line when text is entered */
+}
+
+/* Remove default text field highlighting */
+.text-field .text {
+    -fx-highlight-fill: white;
+    -fx-highlight-text-fill: transparent;
+}
+
+/* YourStyle.css */
+
+.choice-box {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-text-fill: white; /* Set the text color of the choice box */
+    -fx-padding: 5px 10px; /* Adjust padding as needed */
+    -fx-cursor: hand;
+    -fx-border-radius: 20;
+}
+.choice-box:focused {
+    -fx-border-color: #0078d4; /* Set the color of the bottom line when focused */
+    -fx-background-color: transparent;
+}
+.choice-box .arrow {
+    -fx-background-color: white; /* Match the background color of the choice box */
+}
+
+.choice-box-popup {
+    -fx-background-color: black; /* Set the background color of the dropdown menu */
+
+}
+
+.choice-box-popup .menu-item {
+    -fx-padding: 5px; /* Adjust padding as needed */
+    -fx-background-color: transparent; /* Set the background color of the dropdown items */
+
+}
+
+.choice-box-popup .menu-item:hover {
+    -fx-background-color: black; /* Set the background color on hover */
+}
+.choice-box .box {
+    -fx-background-color: transparent;
+}
+
+/* styles.css */
+
+/* Customize the appearance of the slider track */
+.slider
+{
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+.slider .track {
+    -fx-background-color: white; /* Track color */
+}
+
+/* Customize the appearance of the slider thumb (handle) */
+.slider .thumb {
+    -fx-background-color: #3498db; /* Thumb color */
+    -fx-background-radius: 0; /* Remove rounded corners on the thumb */
+}
+
+/* Customize the appearance of the slider tick marks */
+.slider .tick-mark {
+    -fx-fill: blue; /* Tick mark color */
+}
+
+/* Customize the appearance of the slider thumb on hover */
+.slider .thumb:hover {
+    -fx-background-color: white; /* New thumb color on hover */
+}
+/* Customize the appearance of the slider track on hover */
+.slider:hover .track {
+    -fx-background-color: #3592CA; /* New track color on hover */
+}
+/* Customize the appearance of the slider tick labels */
+.slider .label {
+    -fx-text-fill: white; /* Tick label color */
+}
+
+
+/* Add any other styles or adjustments based on your specific DatePicker library */
